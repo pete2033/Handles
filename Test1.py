@@ -69,6 +69,7 @@ else:
     print("hmmm")
 
 print("welcome to handles")
+print("another test")
 RandomMessage("greetings")
 RandomMessage("windMSG")
 RandomMessage("rainMSG")
