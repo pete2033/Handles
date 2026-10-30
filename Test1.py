@@ -68,6 +68,7 @@ elif float(responseAsJSON['features'][0]['properties']['timeSeries'][0]['probOfP
 else:
     print("hmmm")
 
+print("welcome to handles")
 RandomMessage("greetings")
 RandomMessage("windMSG")
 RandomMessage("rainMSG")
