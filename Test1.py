@@ -72,7 +72,7 @@ print("welcome to handles")
 print("another test")
 RandomMessage("greetings")
 RandomMessage("windMSG")
-RandomMessage("rainMSG")
 RandomMessage("tempMSG")
+RandomMessage("rainMSG")
 
 #if float(responseAsJSON['features'][0]['properties']['timeSeries'][0]['totalPrecipAmount']):
