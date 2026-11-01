@@ -1,33 +1,33 @@
-test message 1
-test message 2
-test message 3
-test message 4
-test message 5
-test message 6
-test message 7
-test message 8
-test message 9
-===============greetings above ^
-test2 message 1
-test2 message 2
-test2 message 3
-test2 message 4
-test2 message 5
-test2 message 6
-test2 message 7
-test2 message 8
-test2 message 9
-===============wind above ^
-test3 message 1
-test3 message 2
-test3 message 3
-test3 message 4
-test3 message 5
-test3 message 6
-test3 message 7
-test3 message 8
-test3 message 9
-===============temp above ^
+Attention, Information.\n Hello
+Good Morning, Sir
+Affirm, it is good to see you
+Attention, Hello
+Greetings!
+Information Incoming. Hello
+I have been upgraded!
+Attention, Hello
+You Will Be Greeted!
+=======================================================================greetings above ^
+Incoming Information. It is not windy.
+There is no wind.
+Attention, it is not windy.
+There is no wind currently.
+It is currently completely still
+I can move more than the wind right now.
+The wind is practically non-existent currently.
+The wind is currently still.
+The wind is very low currently.
+=======================================================================very low wind above ^
+There is a slight wind currently.
+Attention, the wind is slight at the present moment
+Incoming Information. It is slightly windy.
+Reminder Incoming.      Disregard. There is only a slight wind.
+There is but a breeze right now, sir
+Only a slight breeze, sir
+There is a slight breeze currently.
+ATTENTION. It is slightly windy.
+I have no other sentences. It is slightly breezy.
+=======================================================================slight wind above ^
 test4 message 1
 test4 message 2
 test4 message 3
@@ -37,4 +37,14 @@ test4 message 6
 test4 message 7
 test4 message 8
 test4 message 9
-#==============rain above ^
+======================================================================windy above ^
+
+
+
+
+
+
+
+
+
+======================================================================very windy above ^
