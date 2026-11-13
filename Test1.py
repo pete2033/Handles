@@ -123,4 +123,3 @@ def giveMeFullMoment():
 giveMeFullMoment()
 
 print(specificTime())
-print(specificTime())
