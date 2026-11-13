@@ -1,3 +1,5 @@
+from time import ctime
+
 import requests
 import random
 import os
@@ -87,3 +89,30 @@ daysOFweek={0:"Monday",1:"Tuesday",2:"Wednesday",3:"Thursday",4:"Friday",5:"Satu
 months={1:"January",2:"Febuary",3:"March",4:"April",5:"May",6:"June",7:"July",8:"August",9:"September",10:"October",11:"November",12:"December"}
 print("Today is",daysOFweek[today], "the", int(dateAsList[2]))
 print(str(daysOFweek[today])+", "+str(int(dateAsList[2]))+", "+str(months[int(dateAsList[1])]))
+
+print(ctime())
+currentTime=ctime()
+currentTimeList=currentTime.split(" ")
+print(currentTimeList[3])
+timeRightNow=str(currentTimeList[3])[0:5]
+print(timeRightNow)
+
+
+
+def getEnding():
+    if str(int(dateAsList[2]))[-1] == "1":
+        ending="st"
+        if int(dateAsList[2]) == 11:
+            ending="th"
+    elif str(int(dateAsList[2]))[-1] == "2":
+        ending="nd"
+        if int(dateAsList[2]) == 12:
+            ending="th"
+    elif str(int(dateAsList[2]))[-1] == "3":
+        ending="rd"
+        if int(dateAsList[2]) == 13:
+            ending="th"
+
+    return ending
+
+print("It is",timeRightNow,"on",daysOFweek[today],str(int(dateAsList[2]))+str(getEnding()))
