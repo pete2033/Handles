@@ -1,6 +1,9 @@
 import requests
 import random
 import os
+from datetime import date
+from datetime import time
+import calendar
 
 APIfile=open("./.venv/APIkeyDoc","r")
 APIkey=APIfile.readline()
@@ -74,6 +77,13 @@ else:
 
 print("welcome to handles")
 print("another test")
-
-
-#if float(responseAsJSON['features'][0]['properties']['timeSeries'][0]['totalPrecipAmount']):
+#print(date.today())
+todaysdate=date.today()
+dateAsList=todaysdate.strftime("%Y.%m.%d")
+dateAsList=dateAsList.split(".")
+#print(dateAsList)
+today=calendar.weekday(int(dateAsList[0]),int(dateAsList[1]),int(dateAsList[2]))
+daysOFweek={0:"Monday",1:"Tuesday",2:"Wednesday",3:"Thursday",4:"Friday",5:"Saturday",6:"Sunday"}
+months={1:"January",2:"Febuary",3:"March",4:"April",5:"May",6:"June",7:"July",8:"August",9:"September",10:"October",11:"November",12:"December"}
+print("Today is",daysOFweek[today], "the", int(dateAsList[2]))
+print(str(daysOFweek[today])+", "+str(int(dateAsList[2]))+", "+str(months[int(dateAsList[1])]))
