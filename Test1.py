@@ -16,9 +16,9 @@ print(responseAsJSON['features'][0]['properties']['timeSeries'][0])
 print(responseAsJSON['features'][0]['properties']['timeSeries'][0]['screenTemperature'])
 
 def RandomMessage(messageType):
-    messageDict={"BasicGreetings":0,"windMSGnot":10,"windMSGslight":20,"wingMSGwindy":30,"windMSGvery":40,
-                 "tempMSGfreezing":50,"tempMSGunder5":60,"tempMSGunder10":70,"tempMSGunder15":80,"tempMSGunder20":90,"tempMSGunder25":100,
-                 "rainMSGdry":110,"rainMSGunder20":120,"rainMSGunder40":130,"rainMSGunder50":140,"rainMSGunder75":150,"rainMSGunder100":160,
+    messageDict={"BasicGreetings":0,"windMSGnot":10,"windMSGslight":20,"wingMSGwindy":30,"windMSGvery":40,"windMSGBad":50,
+                 "tempMSGfreezing":60,"tempMSGunder5":70,"tempMSGunder10":80,"tempMSGunder15":90,"tempMSGunder20":100,"tempMSGunder25":110,
+                 "rainMSGdry":120,"rainMSGunder20":120,"rainMSGunder40":130,"rainMSGunder50":140,"rainMSGunder75":150,"rainMSGunder100":160,
                  }
     lowerbound=messageDict[messageType]+1
     upperbound=messageDict[messageType]+9
