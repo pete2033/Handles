@@ -19,6 +19,7 @@ def getWeather():
     print(responseAsJSON['features'][0]['properties']['modelRunDate'])
     print(responseAsJSON['features'][0]['properties']['timeSeries'][0])
     print(responseAsJSON['features'][0]['properties']['timeSeries'][0]['screenTemperature'])
+    return responseAsJSON
 
 #getWeather()
 
@@ -38,6 +39,7 @@ def RandomMessage(messageType):
     print(text)
 
 def getMessageWind():
+    responseAsJSON=getWeather()
     if float(responseAsJSON['features'][0]['properties']['timeSeries'][0]['windGustSpeed10m']) < 0.00:
         RandomMessage("windMSGnot")
     elif float(responseAsJSON['features'][0]['properties']['timeSeries'][0]['windGustSpeed10m']) < 5.00:
@@ -50,6 +52,7 @@ def getMessageWind():
         print("I wouldn't")
 
 def getMessageTemp():
+    responseAsJSON = getWeather()
     if float(responseAsJSON['features'][0]['properties']['timeSeries'][0]['screenTemperature']) < 0.00:
         print("it is literally freezing")
     elif float(responseAsJSON['features'][0]['properties']['timeSeries'][0]['screenTemperature']) < 5.00:
@@ -64,6 +67,7 @@ def getMessageTemp():
         print("hot")
 
 def getMessageRain():
+    responseAsJSON = getWeather()
     if float(responseAsJSON['features'][0]['properties']['timeSeries'][0]['probOfPrecipitation']) < 0.00:
         print("dry right now")
     elif float(responseAsJSON['features'][0]['properties']['timeSeries'][0]['probOfPrecipitation']) < 20.00:
@@ -114,8 +118,10 @@ def getEnding():
         ending="rd"
         if int(dateAsList[2]) == 13:
             ending="th"
-
+    elif str(int(dateAsList[2]))[-1]=="0":
+        ending="th"
     return ending
+
 
 def giveMeFullMoment():
     print("It is",averageTime(),"on",daysOFweek[today],str(int(dateAsList[2]))+str(getEnding())+" of "+str(months[int(dateAsList[1])]))
@@ -123,3 +129,5 @@ def giveMeFullMoment():
 giveMeFullMoment()
 
 print(specificTime())
+
+getMessageWind()
